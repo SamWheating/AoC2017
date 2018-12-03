@@ -2,4 +2,6 @@ package main
 
 import "fmt"
 
-input := 347991
+func main() {
+	fmt.Println("still need to solve this one!")
+}

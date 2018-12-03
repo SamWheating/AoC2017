@@ -1,25 +1,25 @@
 package main
 
-import(
+import (
 	"fmt"
 	"io/ioutil"
-	"strings"
 	"strconv"
+	"strings"
 )
 
 func check(e error) {
-    if e != nil {
-        panic(e)
-    }
+	if e != nil {
+		panic(e)
+	}
 }
 
 func get_input() []int {
 	dat, err := ioutil.ReadFile("day6/day6.txt")
 	check(err)
-	input := string(dat)[:(len(string(dat))-1)]
+	input := string(dat)[:(len(string(dat)) - 1)]
 	as_strings := strings.Split(input, "\t")
 	blocks := []int{}
-	for _, i := range(as_strings) {
+	for _, i := range as_strings {
 		num, _ := strconv.Atoi(i)
 		blocks = append(blocks, num)
 	}
@@ -30,8 +30,8 @@ func max_left_index(numbers []int) int {
 	// Returns the index of the max item in the array (ties go to the lowest tied index)
 	max := 0
 	max_index := 0
-	for index, i := range(numbers){
-		if i > max{
+	for index, i := range numbers {
+		if i > max {
 			max = i
 			max_index = index
 		}
@@ -48,7 +48,7 @@ func distribute_blocks(blocks []int) []int {
 		blocks[location] += 1
 		location += 1
 		location = location % len(blocks)
-	} 
+	}
 	return blocks
 }
 
@@ -62,8 +62,8 @@ func slices_equal(a []int, b []int) bool {
 }
 
 func contains(a [][]int, b []int) bool {
-	for _, i := range(a){
-		if slices_equal(b, i){
+	for _, i := range a {
+		if slices_equal(b, i) {
 			return true
 		}
 	}
@@ -72,13 +72,13 @@ func contains(a [][]int, b []int) bool {
 
 func part_1(blocks []int) int {
 	blocks_copy := make([]int, len(blocks))
-    copy(blocks_copy, blocks)
+	copy(blocks_copy, blocks)
 	seen := [][]int{blocks_copy}
 	steps := 0
 	for {
 		blocks = distribute_blocks(blocks)
 		steps += 1
-		if contains(seen, blocks){
+		if contains(seen, blocks) {
 			return steps
 		}
 		blocks_copy := make([]int, len(blocks))
@@ -90,13 +90,13 @@ func part_1(blocks []int) int {
 func part_2(blocks []int) int {
 	// get into a known repeating state:
 	blocks_copy := make([]int, len(blocks))
-    copy(blocks_copy, blocks)
+	copy(blocks_copy, blocks)
 	seen := [][]int{blocks_copy}
 	steps := 0
 	for {
 		blocks = distribute_blocks(blocks)
 		steps += 1
-		if contains(seen, blocks){
+		if contains(seen, blocks) {
 			break
 		}
 		blocks_copy := make([]int, len(blocks))
@@ -110,7 +110,7 @@ func part_2(blocks []int) int {
 	for {
 		blocks = distribute_blocks(blocks)
 		steps += 1
-		if slices_equal(target, blocks){
+		if slices_equal(target, blocks) {
 			break
 		}
 	}
