@@ -8,30 +8,12 @@ I'm also completing the 2018 Advent of Code challenges as they come out, but I'm
 
 ### Progress:
 
-Level | Part 1 | Part 2
------------- | -------------| -------------
-Day 1 | :star: | :star: |
-Day 2 | :star: | :star: |
-Day 3 | | |
-Day 4 | :star: | :star: |
-Day 5 | :star: | :star: |
-Day 6 | :star: | :star: |
-Day 7 | :star: | |
-Day 8 | :star: | :star: |
-Day 9 | :star: | :star: |
-Day 10 | | |
-Day 11 | | |
-Day 12 | | |
-Day 13 | | |
-Day 14 | | |
-Day 15 | | |
-Day 16 | | |
-Day 17 | | |
-Day 18 | | |
-Day 19 | | |
-Day 20 | | |
-Day 21 | | |
-Day 22 | | |
-Day 23 | | |
-Day 24 | | |
-Day 25 | | |
+Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday
+------- | -------| ------- | ------- | -------| -------| -------
+  |  |   |   |  | **1**  :star::star: | **2**  :star::star:
+ **3** | **4**  :star::star:  | **5**  :star::star:  | **6**  :star::star: | **7**  :star: | **8**  :star::star:  | **9**  :star::star: 
+ **10** | **11** | **12** | **13** :star::star:  | **14** | **15** | **16** 
+ **17** | **18** | **19** | **20** | **21** | **22** | **23**  
+ **24** | :christmas_tree: | **26** | **27** | **28** | **29** | **30** 
+ **31** |  |   |   |   |   |   
+
